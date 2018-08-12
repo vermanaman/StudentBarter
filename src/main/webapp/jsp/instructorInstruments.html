@@ -1,0 +1,39 @@
+<div class="row" ng-controller="ProfileController as tab">
+	<div class="col col-md-10">
+		<div ng-show="tab.isSet(1)">
+			<div class="panel-body">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3 class="panel-title">Current Skills</h3>
+					</div>
+					<form >
+						<div class="container-fluid">
+							<table class="toppad col-md-10 table-striped">
+								<thead>
+									<tr>
+										<th>Instrument Image</th>
+										<th>Instructor Image</th>
+										<th>Instrument Name</th>
+										<th>Remove Skill</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="instrument in controller.listInstruments">
+										<td><strong><img src="http://thumbs.dreamstime.com/m/vector-indian-instruments-traditional-set-music-billboard-63457842.jpg"></strong></td>
+										<td><strong><img class="img-circle img-responsive"
+											src="http://lorempixel.com/100/100" /></strong></td>
+										<td><strong>{{instrument.name}}</strong></td>
+										<td><input type="checkbox"
+											ng-click="controller.addInstrument(instrument)"></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</form>
+				</div>
+					<button class="btn btn-lg btn-primary btn-block "
+								style="height: 40px; width: 200px" type="submit">Submit</button>
+							</div>
+			</div>
+		</div>
+	</div>

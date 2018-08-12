@@ -1,0 +1,118 @@
+<div class="page-header">
+	<h1>Registration</h1>
+</div>
+
+<div class="col-md-10">
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<h3 class="panel-title">Register as New User</h3>
+		</div>
+		<div class="panel-body">
+			<form class="form-signin" ng-submit="controller.saveUser()">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label for="inputEmail">Email address</label> <input
+								ng-model="controller.user.username" type="email" id="inputEmail"
+								class="form-control" placeholder="Email address" required
+								autofocus>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label for="inputPassword">Password</label> <input
+								ng-model="controller.user.password" type="password"
+								id="inputPassword" class="form-control" placeholder="Password"
+								required>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label for="inputName">Name</label> <input
+								ng-model="controller.user.name" type="text" id="inputName"
+								class="form-control" placeholder="Name" >
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label for="inputDateOfBirth">Date Of Birth</label> <input
+								ng-model="controller.user.dateOfBirth" type="date"
+								id="inputDateOfBirth" class="form-control"
+								placeholder="DateOfBirth" >
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label> <input ng-model="controller.user.gender"
+								name="gender" type="radio" value="Male">
+								Male
+							</label> <label> <input ng-model="controller.user.gender"
+								name="gender" type="radio" value="Female">
+								Female
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label for="inputPhone">Phone</label> <input
+								ng-model="controller.user.phone" type="text" id="inputPhone"
+								class="form-control" placeholder="Phone" >
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label for="inputAddress">Address</label> <input
+								ng-model="controller.user.address" type="text" id="inputAddress"
+								class="form-control" placeholder="Address" >
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label> <input ng-model="controller.user.userType" ng-required="!controller.user.userType"
+								name="userType" type="radio" value="Student"
+								ng-click="showme=false"> Student
+							</label> <label> <input ng-model="controller.user.userType" ng-required="!controller.user.userType"
+								name="userType" type="radio" value="Instructor"
+								ng-click="showme=true"> Instructor
+							</label>
+						</div>
+					</div>
+				</div>
+				<div ng-show="showme">
+					<div class="row">
+						<div class="col-md-8">
+							<div class="panel panel-primary">
+								<div class="panel-heading">
+									<h3 class="panel-title">Add Skills</h3>
+								</div>
+								<div class="panel-body">
+									<div class="checkbox"
+										ng-repeat="course in controller.listCourses">
+										<label><input type="checkbox" value="{{course.name}}" ng-model="course.checked" ng-change="controller.selectedInstruments()">{{course.name}}</label>
+									
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="btn btn-lg btn-primary btn-block "
+					style="height: 40px; width: 100px" type="submit" >Submit</button>
+			</form>
+		</div>
+	</div>
+</div>

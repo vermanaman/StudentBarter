@@ -1,0 +1,20 @@
+<div class="page-header">
+	<h1>Profile</h1>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-2 col-md-2">
+			<ul class="nav nav-pills nav-stacked">
+				<li ng-class="{active:controller.isSet(1)}"><a href ng-click="controller.setcontroller(1)">Personal Information</a></li>
+				<li ng-show="controller.user.userType=='Student'" ng-class="{active:controller.isSet(2)}"><a href ng-click="controller.setcontroller(2)">Subscriptions</a></li>
+				<li ng-show="controller.user.userType=='Instructor'" ng-class="{active:controller.isSet(3)}"><a href ng-click="controller.setcontroller(3)">Instruments</a></li>
+			</ul>
+		</div>
+
+<div class="container-fluid">
+		<personal-information ng-show="controller.isSet(1)"></personal-information>
+		<subscribed-courses ng-show="controller.isSet(2)"></subscribed-courses>
+		<instructor-instruments ng-show="controller.isSet(3)" ></instructor-instruments>
+		</div>
+	</div>
+</div>

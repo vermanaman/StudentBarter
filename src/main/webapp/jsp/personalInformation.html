@@ -1,0 +1,50 @@
+<div class="col col-md-8">
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<h3 class="panel-title">Personal Information</h3>
+		</div>
+		<div class="panel-body">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAMAAAC8EZcfAAAAMFBMVEXJycmcnJzMzMyZmZnCwsKioqK4uLienp7Hx8etra2pqammpqbOzs6Wlpazs7Ovr6+rKtMAAAADxUlEQVR4nO2b25arIAxAa7iICvr/f3uwHTu2dpwASfCsYb/N9GWvAAEhud0ajUaj0Wg0Go1Go9FoNBr/PeD0E6gt8waAttYOaiPEvyzAVTS9HZYpanXfrJbLMrgLKIJ3pt+77S3N6Gsr6jF8ttskg9UV9WAOZ3YPxb7akvF2OY3ehqk0F3+ce8cgxrkorgfu99HdKY434SBq2yf4RcPByhpOyNHdKc6Chh47+16QM3Rpw/sdQyE/nT6+m6FIDMFm+nVdEMk2mQN8ZxAwTMp/78R8yI03BX7RkD0dJiboA5Pj9QPc+eAkhD1vCOdCv2jIGkJdskK+MIwrGcZyv663fIKeIICdWvhmoSuegXdDthAW5sBvQa4QlubADa5cCAPJCMcQMn2JwkLjxyaoJypBpnNh/jnwnXB1QcUiWHCSPgiy7HZuoPJjWiWaLIDxwMAxxk2wCTbBJvjnBSk+SDgFL78XX/4085cEmQ6sdN8kXF91pTdbT0Gurzqqz87A9QDqiG4W2J4jgObQz3c3c/MkY2z4nriB5PptYLwEpkiFhvMOWBPcb3EGMBoWL2Tm57DiXMj+oFiYC/mfZEtDyHjF/4UfSwxFKhfy9xMlUuNz+QftG8yZfj3zS+fOMCuGjHswiaFskRmi7O0VFaTG9wH4xHyoxcvLUvKhksl/71jsw46aq/jdwOFKuIJUSdQnxV+LHJUZqhbarmWiPysqVas8dAdY+1ZE/bQLs71ETfpaIz+HF8m1Gj3+t7bZDgDw2jzx16mT3wNPaps0Go0s4JXaOjvg3sdkg9oT7i1OtTe6GKi1fam/Kx22usgUf9XVwhmP1cvSf9yI95pmWeYKJ5p1a/t8Svgg2U3GiTrG84FBue0swyh2eIC1hy7J7oHQ8Qv0ktWt0ckcYMEbU3K9xd1rp8fyi/4wsw00po8OgQo8hoDso0PQLwwr2uuOrqxC9dSLBdx5E2dtxdQ+OgwT5YV6bp/VKYqsozKvjw5hSNTjVNJm9YshRY8TOJbx/TIcirtS/cDotxoWPt6lXvVmUGRIVulxQlH7hqOq3z9jKIgg6/zbyM+HXPnvYJiZD/ny38EwKx9KLJCnYc5CKS+gSCCjz4miBAVPes8nYckqzjA1hJRFvyj6tK8Aoia/BNJaKrOf/QtI60ql6w9Ck1L0I71CHiSUjoqcEY6M6FlI06ebDLquhqTSMgdsEwJNrWoGEy6EmYU7BCAzDYgn6Q1ksiYq6M4BdfqXPAe+gyoCJ+t64BOsGUHEJKyyzW1gtruqgphekyaYJvgPyJE00mlGIc4AAAAASUVORK5CYII="
+				class="img-circle img-responsive">
+
+			<div class="container-fluid">
+				<table class="table table-user-information">
+					<tbody>
+						<tr>
+							<td>Name</td>
+							<td>{{controller.user.name}}</td>
+						</tr>
+						<tr>
+							<td>Date of Birth</td>
+							<td>{{controller.user.dateOfBirth}}</td>
+						</tr>
+						<tr>
+
+							<td>Gender</td>
+							<td>{{controller.user.gender}}</td>
+
+						</tr>
+						<tr>
+							<td>Home Address</td>
+							<td>{{controller.user.address}}</td>
+						</tr>
+
+						<tr>
+							<td>Email</td>
+							<td><a href="mailto:info@support.com">{{controller.user.username}}</a></td>
+						</tr>
+
+						<tr>
+							<td>Phone Number</td>
+							<td>{{controller.user.phone}}</td>
+						</tr>
+
+					</tbody>
+				</table>
+
+			</div>
+		</div>
+	</div>
+	<a href="#" class="btn btn-primary">Edit</a>
+
+</div>
